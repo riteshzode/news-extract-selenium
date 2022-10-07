@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 import pandas as pd
+from datetime import datetime
 
 #############################################
 
@@ -59,7 +60,7 @@ my_dict = {"title": titles, "subtitle": subtitles, "link": links}
 
 df = pd.DataFrame(my_dict)
 
-df.to_csv("file.csv")
+df.to_csv("file_{datetime.now().strftime('%d/%m/%Y')}.csv")
 
 #############################################
 # Step 5
