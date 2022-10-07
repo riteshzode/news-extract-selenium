@@ -60,7 +60,9 @@ my_dict = {"title": titles, "subtitle": subtitles, "link": links}
 
 df = pd.DataFrame(my_dict)
 
-df.to_csv("file_{datetime.now().strftime('%d/%m/%Y')}.csv")
+date = datetime.now().strftime('%d_%m_%Y')
+
+df.to_csv(f"file_{date}.csv")
 
 #############################################
 # Step 5
